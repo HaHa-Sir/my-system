@@ -1,4 +1,3 @@
-
 const path = require('path')
 
 const resolve = (dir) => {
@@ -9,13 +8,15 @@ module.exports = {
   lintOnSave: true,
   devServer: {
     proxy: {
-      'api': {
+      api: {
         target: 'http://localhost:4000'
       }
     }
   },
   chainWebpack: (config) => {
+    config.resolve.symlinks(true)
     config.resolve.alias
-      .set('src', resolve('src'))
+      .set('@', resolve('src'))
+      .set('assets', resolve('src/assets'))
   }
 }

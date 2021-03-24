@@ -1,0 +1,27 @@
+
+.el-menu
+  background: none
+  .el-menu-item, .el-submenu__title
+    font-size: 13px !important
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+  .el-menu-item *
+    vertical-align: unset !important
+.el-menu--horizontal>.el-menu-item
+  height: 48px
+  line-height: 48px
+  opacity: 1
+  border-bottom: none
+  background: none !important
+.el-menu--horizontal
+  .el-menu-item:not(.is-disabled):hover
+    color: rgba(255,255,255,0.65)
+.el-menu--horizontal>.el-menu-item.is-active
+  // color: #FFFFFF !important
+  background: none !important
+  border-bottom: none !important
+
+.el-menu--collapse>.el-submenu>.el-submenu__title span
+  width: unset
+  height: unset
