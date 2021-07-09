@@ -2,15 +2,14 @@
 el-container#app-frame(direction='vertical')
   TopBar
   el-container(style="height: calc(100% - 60px)")
-    SideBar(
-      :menus='menus')
     el-main#app-main
       el-container(direction='vertical')
         //- .tagsViewContainer
         //-   TagsView.tagsview
         el-main.viewRouterContainer
           keep-alive
-            router-view(:key='key')
+            #container 
+              router-view(:key='key')
 </template>
 
 <script>
